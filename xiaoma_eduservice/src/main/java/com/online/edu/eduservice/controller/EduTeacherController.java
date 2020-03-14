@@ -38,20 +38,23 @@ public class EduTeacherController {
 
     /**
      * 根据id修改教师
+     *
      * @param eduTeacher
      * @return
      */
     @PutMapping("/{id}")
-    public R updateTeacher(EduTeacher eduTeacher){
-        boolean b = eduTeacherService.updateById(eduTeacher);
+    public R updateTeacher(@RequestBody EduTeacher eduTeacher) {
+        boolean b = eduTeacherService.updateTeacherById(eduTeacher);
         if (b) {
             return R.ok();
         } else {
             return R.error();
         }
     }
+
     /**
      * 根据id查询教师
+     *
      * @param id
      * @return
      */
@@ -63,12 +66,13 @@ public class EduTeacherController {
 
     /**
      * 添加教师
+     *
      * @param eduTeacher
      * @return
      */
     @PostMapping()
-    public R createTeacher(EduTeacher eduTeacher) {
-        boolean save = eduTeacherService.save(eduTeacher);
+    public R createTeacher(@RequestBody EduTeacher eduTeacher) {
+        boolean save = eduTeacherService.createTeacher(eduTeacher);
         if (save) {
             return R.ok();
         } else {
@@ -133,10 +137,13 @@ public class EduTeacherController {
      * @return
      */
     @DeleteMapping("{id}")
-    public boolean deleteTeacherById(@PathVariable String id) {
-
-        boolean b = eduTeacherService.removeById(id);
-        return b;
+    public R deleteTeacherById(@PathVariable String id) {
+        boolean b = eduTeacherService.deleteTeacherById(id);
+        if (b) {
+            return R.ok();
+        } else {
+            return R.error().message("系统异常");
+        }
     }
 }
 
