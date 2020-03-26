@@ -12,4 +12,7 @@ public interface ResultCode {
     int ERROR = 20001;
 
     int AUTH = 20002;
+
+    // 课程是null
+    int COURSE_IS_NULL = 20201;
 }

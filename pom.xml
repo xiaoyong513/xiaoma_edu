@@ -5,6 +5,7 @@
     <modules>
         <module>xiaoma_eduservice</module>
         <module>xiaoma_common</module>
+        <module>xiaoma_common_oss</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -22,10 +23,12 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <guli.version>0.0.1-SNAPSHOT</guli.version>
+        <xiaoma.version>0.0.1-SNAPSHOT</xiaoma.version>
         <mybatis-plus.version>3.0.5</mybatis-plus.version>
         <velocity.version>2.0</velocity.version>
         <swagger.version>2.7.0</swagger.version>
+        <poi.version>3.9</poi.version>
+        <commons-fileupload.version>1.3.1</commons-fileupload.version>
     </properties>
 
     <dependencies>
@@ -71,6 +74,29 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.online.edu</groupId>
+                <artifactId>xiaoma_common</artifactId>
+                <version>${xiaoma.version}</version>
+            </dependency>
+            <!--xls-->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <!--xlsx-->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <!--文件上传-->
+            <dependency>
+                <groupId>commons-fileupload</groupId>
+                <artifactId>commons-fileupload</artifactId>
+                <version>${commons-fileupload.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

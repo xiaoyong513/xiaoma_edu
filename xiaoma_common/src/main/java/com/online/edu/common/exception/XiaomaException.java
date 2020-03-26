@@ -1,9 +1,9 @@
-package com.online.edu.eduservice.exception;
+package com.online.edu.common.exception;
 
+import com.online.edu.common.constants.ResultCodeEnum;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 
 /**
  * @Author: changyong
@@ -18,4 +18,9 @@ public class XiaomaException extends RuntimeException {
     private int code;
 
     private String message;
+
+    //public XiaomaException(ResultCodeEnum resultCodeEnum) {
+    //    this.code= resultCodeEnum.getCode();
+    //    this.message = resultCodeEnum.getMessage();
+    //}
 }

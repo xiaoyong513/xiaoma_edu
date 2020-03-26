@@ -4,7 +4,7 @@ package com.online.edu.eduservice.controller;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.online.edu.common.R;
 import com.online.edu.eduservice.entity.EduTeacher;
-import com.online.edu.eduservice.entity.dto.QueryTeacher;
+import com.online.edu.eduservice.entity.query.QueryTeacher;
 import com.online.edu.eduservice.service.EduTeacherService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;

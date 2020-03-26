@@ -1,10 +1,9 @@
 package com.online.edu.eduservice.handler;
 
 import com.online.edu.common.R;
-import com.online.edu.eduservice.exception.XiaomaException;
+import com.online.edu.common.exception.XiaomaException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 /**

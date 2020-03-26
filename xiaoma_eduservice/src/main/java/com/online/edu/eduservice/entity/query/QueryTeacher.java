@@ -1,4 +1,4 @@
-package com.online.edu.eduservice.entity.dto;
+package com.online.edu.eduservice.entity.query;
 
 import lombok.Data;
 
